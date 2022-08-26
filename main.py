@@ -7,7 +7,8 @@ import os
 import random
 import re
 
-today = datetime.now() + timedelta(hours=8)
+today = datetime.utcnow() + timedelta(hours=8)  # 东八区
+today = datetime.strptime(str(today.date()), "%Y-%m-%d")
 start_date = os.getenv('START_DATE')
 city = os.getenv('CITY')
 birthday = os.getenv('BIRTHDAY')
