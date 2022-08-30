@@ -154,7 +154,7 @@ data = {
   },
 }
 
-for index, aim_date in split_birthday():
+for index, aim_date in enumerate(split_birthday()):
   key_name = "birthday_left"
   if index != 0:
     key_name = key_name + "_%d" % index
