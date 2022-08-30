@@ -65,7 +65,7 @@ def get_counter_left(aim_date):
 
   # 为了经常填错日期的同学们
   if re.match(r'^\d{1,2}\-\d{1,2}$', aim_date):
-    next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
+    next = datetime.strptime(str(date.today().year) + "-" + aim_date, "%Y-%m-%d")
   elif re.match(r'^\d{2,4}\-\d{1,2}\-\d{1,2}$', aim_date):
     next = datetime.strptime(aim_date, "%Y-%m-%d")
     next.year = date.today().year
