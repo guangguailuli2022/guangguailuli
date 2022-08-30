@@ -7,8 +7,9 @@ import os
 import random
 import re
 
-today = datetime.utcnow() + timedelta(hours=8)  # 东八区
-today = datetime.strptime(str(today.date()), "%Y-%m-%d")
+nowtime = datetime.utcnow() + timedelta(hours=8)  # 东八区时间
+today = datetime.strptime(str(nowtime.date()), "%Y-%m-%d") #今天的日期
+
 start_date = os.getenv('START_DATE')
 city = os.getenv('CITY')
 birthday = os.getenv('BIRTHDAY')
@@ -55,6 +56,7 @@ def get_memorial_days_count():
 def get_counter_left(aim_date):
   if aim_date is None:
     return 0
+
   # 为了经常填错日期的同学们
   if re.match('^\d{1,2}\-\d{1,2}$', aim_date):
     next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
@@ -63,7 +65,7 @@ def get_counter_left(aim_date):
     next.year = date.today().year
   else:
     print('日期格式不符合要求')
-  if next < datetime.now():
+  if next < nowtime:
     next = next.replace(year=next.year + 1)
   return (next - today).days
 
