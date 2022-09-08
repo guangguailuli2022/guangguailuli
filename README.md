@@ -6,13 +6,16 @@
 
 这里有[更新说明](./UPGRADE.md)
 
-新项目（另一个项目）链接：https://dm.iuv520.com
+新项目（另一个项目，要收费但是稳定）链接：https://dm.iuv520.com
 
 ## 使用说明
 
 不想看文字的可以看下面的视频教程：
 
 https://www.bilibili.com/video/BV1ke4y1o7Wd/
+
+更全的文档，如果愿意大家可以共建：
+https://www.notion.so/rxrw/Daily-Morning-e622c1cd6d4842a88e68eac27f075744
 
 在我刚想构思这个教程怎么让不懂编程的朋友很快入门的时候，我考虑到：避免服务器搭建，避免定时任务，避免接触代码。在经历过各种思考后，觉得可以用 Github Actions 来白嫖。。你如果有一个自己的服务器可以参考[这里](#代码使用)运行代码。
 
